@@ -29,7 +29,7 @@ function validateFirstName () {
  const value = firstName.value.trim();
  const regex = /^[A-Za-z]+$/;
  if (!regex.test(value)) {
-    showError(firstName, "First name must cintain only letters");
+    showError(firstName, "First name must contain only letters");
     return false;
     }
     clearError(firstName);
@@ -40,7 +40,7 @@ function validateLastName () {
  const value = firstName.value.trim();
  const regex = /^[A-Za-z]+$/;
  if (!regex.test(value)) {
-    showError(lastName, "Last name must cintain only letters");
+    showError(lastName, "Last name must contain only letters");
     return false;
     }
     clearError(lastName);
