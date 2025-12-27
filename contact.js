@@ -9,6 +9,19 @@ const charCounter = document.querySelector(".char-counter");
 const successMessage = document.getElementById("successMessage");
 const form = document.getElementById("contactForm");
 
+// Character Counter 
+
+message.addEventListener("input", () => {
+    const length = message.value.length;
+    charCounter.textContent = '${length} / 20 characters';
+
+    if (length < 20) {
+        charCounter.style.color = "red";
+        } else {
+            charCounter.style.color = "green";
+            } 
+        });
+
 
 // Validation functions will be added here
 
@@ -46,10 +59,34 @@ function validateEmail () {
         clearError(email);
         return true;
         }
-function validateMessage () {}
 
-function showError () {}
-function clearError () {}
+function validateMessage () {
+    const value = message.value.trim();
+
+    if (value.length < 20) {
+        showError(message, "Message must be at least 20 characters long");
+        return false;
+        }
+        clearError(message);
+        return true;
+}
+
+function showError (input, message) {
+    const container = input.parentElement;
+    const error = container.querySelector(".error-message");
+
+    error.textContent = message;
+    error.style.color = "#dc3545";
+    input.style.borderColor = "#dc3545";
+}
+function clearError (input) {
+    const container = input.parentElement;
+    const error = container.querySelector(".error-message");
+
+    error.textContent = "";
+    input.style.borderColor = "green";
+}
+
 
 function clearForm () {}
 
