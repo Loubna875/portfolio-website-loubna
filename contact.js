@@ -75,12 +75,33 @@ function validateMessage () {
         clearError(message);
         return true;
 }
+       // Phone 
+       function validatePhone() {
+        const value = phone.value.trim();
+
+        if (value === "") {
+            clearError(phone);
+            return true;
+            }
+
+            const regex = /^[0-9+\- ]{6,15}$/;
+            if (!regex.test(value)) {
+                showError(phone, "Phone number is invalid");
+                return false;
+                }
+
+                clearError(phone);
+                return true;
+                }
+
+
 
 function showError (input, message) {
     const container = input.parentElement;
     const error = container.querySelector(".error-message");
 
     error.textContent = message;
+    error.style.opacity = "1";
     error.style.color = "#dc3545";
     input.style.borderColor = "#dc3545";
 }
@@ -89,6 +110,7 @@ function clearError (input) {
     const error = container.querySelector(".error-message");
 
     error.textContent = "";
+    error.style.opacity = "0";
     input.style.borderColor = "green";
 }
 
@@ -117,10 +139,14 @@ form.addEventListener("submit", function(event) {
         clearForm();
         });
 
+function clearForm () {
+    firstName.value = "";
+    lastName.value = "";
+    email.value = "";
+    phone.value = "";
+    subject.value = "";
+    message.value = "";
 
-    
-
-
-
-
-function clearForm () {}
+    charCounter.textContent = "0 / 20 characters";
+    charCounter.style.color = "red";
+}
