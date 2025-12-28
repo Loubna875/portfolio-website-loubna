@@ -92,7 +92,7 @@ function validateMessage () {
 
                 clearError(phone);
                 return true;
-                }
+                } 
 
 
 
