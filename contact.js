@@ -13,7 +13,7 @@ const form = document.getElementById("contactForm");
 
 message.addEventListener("input", () => {
     const length = message.value.length;
-    charCounter.textContent = '${length} / 20 characters';
+    charCounter.textContent = `${length} / 20 characters`;
 
     if (length < 20) {
         charCounter.style.color = "red";
@@ -26,7 +26,6 @@ message.addEventListener("input", () => {
 // Validation functions 
 
    //First name
-
 function validateFirstName () {
  const value = firstName.value.trim();
  const regex = /^[A-Za-z]+$/;
@@ -40,7 +39,7 @@ function validateFirstName () {
 
     // Last name
 function validateLastName () {
- const value = firstName.value.trim();
+ const value = lastName.value.trim();
  const regex = /^[A-Za-z]+$/;
  if (!regex.test(value)) {
     showError(lastName, "Last name must contain only letters");
@@ -75,16 +74,16 @@ function validateEmail () {
         }
 
         // Message
-function validateMessage () {
-    const value = message.value.trim();
-
-    if (value.length < 20) {
-        showError(message, "Message must be at least 20 characters long");
-        return false;
+        function validateMessage () {
+            const value = message.value.trim();
+            
+            if (value.length < 20) {
+                showError(message, "Message must be at least 20 characters long");
+                return false;
         }
         clearError(message);
         return true;
-}
+    }
        // Phone 
        function validatePhone() {
         const value = phone.value.trim();
@@ -104,25 +103,25 @@ function validateMessage () {
                 return true;
                 } 
 
-
-
-function showError (input, message) {
-    const container = input.parentElement;
-    const error = container.querySelector(".error-message");
-
-    error.textContent = message;
-    error.style.opacity = "1";
-    error.style.color = "#dc3545";
-    input.style.borderColor = "#dc3545";
-}
-function clearError (input) {
-    const container = input.parentElement;
-    const error = container.querySelector(".error-message");
-
-    error.textContent = "";
-    error.style.opacity = "0";
-    input.style.borderColor = "green";
-}
+                // Error display
+                
+                function showError (input, message) {
+                    const container = input.parentElement;
+                    const error = container.querySelector(".error-message");
+                    
+                    error.textContent = message;
+                    error.style.opacity = "1";
+                    error.style.color = "#dc3545";
+                    input.style.borderColor = "#dc3545";
+                }
+                function clearError (input) {
+                     const container = input.parentElement;
+                     const error = container.querySelector(".error-message");
+                     
+                     error.textContent = "";
+                      error.style.opacity = "0";
+                      input.style.borderColor = "green";
+                    }
 
 // Form submission
 
@@ -134,12 +133,13 @@ form.addEventListener("submit", function(event) {
     const emailValid = validateEmail();
     const subjectValid = validateSubject();
     const phoneValid= validatePhone();
+    const messageValid = validateMessage();
 
-    if(!firstValid || !lastValid || !emailValid || !messageValid || !subjectValid || !phoneValid ) {
+    if(!firstValid || !lastValid || !emailValid || !subjectValid || !messageValid || !phoneValid ) {
         return; // Errors already shown
         }
      // If everything is valid it will show success message
-     successMessage.textContent = 'Thank you ${firstName.value}! I will contact you soon!';
+     successMessage.textContent = `Thank you ${firstName.value}! I will contact you soon!`;
      successMessage.style.color = "green";
      
      setTimeout(() =>  {
@@ -149,13 +149,14 @@ form.addEventListener("submit", function(event) {
         clearForm();
         });
 
-function clearForm () {
-    firstName.value = "";
-    lastName.value = "";
-    email.value = "";
-    phone.value = "";
-    subject.value = "";
-    message.value = "";
+        // Clear form
+        function clearForm () {
+            firstName.value = "";
+            lastName.value = "";
+            email.value = "";
+            phone.value = "";
+            subject.value = "";
+            message.value = "";
 
     charCounter.textContent = "0 / 20 characters";
     charCounter.style.color = "red";
