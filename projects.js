@@ -24,16 +24,16 @@ const projects = [
             category: "School Projects",
             technologies: ["Power BI", "DAX"],
             image: "assets/olympic-games.jpg",
-            link: "https://github.com/loubna875/portfolio-website-loubna/blob/main/assets/olympic-games-dashboard.pbix""
+            link: "https://github.com/loubna875/portfolio-website-loubna/blob/main/assets/olympic-games-dashboard.pbix"
         },
-  {
-    id: 4,
-    title: "UI Design Mockups",
-    description: "A set of modern UI mockups created for a mobile app concept.",
-    category: "Design",
-    technologies: ["Figma"],
-    image: "images/design.jpg",
-    link: "https://example.com"
+        {
+            id: 4,
+            title: "Diamond Analysis Dashboard",
+             description: "An analysis of diamond prices accross US",
+             category: "Data Analysis",
+             technologies: ["Data Analysis", "Power PI"],
+             image: "assets/diamond-analysis.jpg",
+             link: "https://github.com/loubna875/portfolio-website-loubna/blob/main/assets/DiamondAnalysis.pdf"
   },
   {
     id: 5,
