@@ -33,16 +33,16 @@ const projects = [
              category: "Data Analysis",
              technologies: ["Data Analysis", "Power PI"],
              image: "assets/diamond-analysis.jpg",
-             link: "https://github.com/loubna875/portfolio-website-loubna/blob/main/assets/DiamondAnalysis.pdf"
+             link: "https://github.com/loubna875/portfolio-website-loubna/blob/main/assets/Diamond-Analysis.pdf"
   },
   {
     id: 5,
-    title: "Calculator App",
-    description: "A responsive calculator built with JavaScript and CSS grid.",
+    title: "Analysis of data set using R",
+    description: "A report on New City Airports using R.",
     category: "School Projects",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    image: "images/calculator.jpg",
-    link: "https://example.com"
+    technologies: ["R", "Data Analysis", "Data Cleaning"],
+    image: "assets/nyc-flights-report.jpg",
+    link: "https://github.com/loubna875/portfolio-website-loubna/blob/main/assets/report-nyc-flights.pdf"
   },
   {
     id: 6,
