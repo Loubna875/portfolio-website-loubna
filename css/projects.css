@@ -43,7 +43,7 @@
   background: #eee;
   padding: 5px 10px;
   border-radius: 6px;
-  font-size: 0.9rem;
+  font-size: 2.3rem;
   margin-bottom: 10px;
 }
 
@@ -65,7 +65,7 @@
 
 .filter-btn {
   padding: 12px 20px;
-  font-size: 1.1rem;
+  font-size: 3rem;
   border: none;
   border-radius: 8px;
   background-color: #eee;
@@ -80,7 +80,6 @@
 }
 
 
-
 /* Project title */
 .project-card h3 {
   font-size: 1.6rem; 
@@ -90,14 +89,14 @@
 /* Project description*/
 
 .project-card p {
-  font-size: 1.15rem; 
+  font-size: 2.1rem; 
   line-height: 1.7;
   margin-bottom: 16px;
 }
 
 /* View project link */
 .project-card a {
-  font-size: 1.1rem;
+  font-size: 1.9rem;
   margin-top: 10px;
 }
 
@@ -106,9 +105,12 @@ body {
 }
 
 #projectCounter {
-  font-size: 1.3rem;        /* Make the text bigger */
-  font-weight: 600;         /* Slightly bold */
-  text-align: center;       /* Center it */
-  margin: 10px 0 25px;      /* Add spacing above and below */
-  color: #2c0041;           /* Match your theme */
+  font-size: 1.9rem;        
+  font-weight: 600;        
+  text-align: center;     
+  margin: 10px 0 25px;      
+  color: #2c0041;           
 }
+
+
+
