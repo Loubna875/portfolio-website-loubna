@@ -122,13 +122,13 @@ body {
   }
 
   .project-card {
-    max-width: 100%;          /* full width on mobile */
-    padding: 20px;            /* reduce padding */
+    max-width: 100%;          
+    padding: 20px;            
     border-radius: 12px;
   }
 
   .project-card img {
-    height: 180px;            /* smaller image */
+    height: 180px;            
     border-radius: 12px;
   }
 
