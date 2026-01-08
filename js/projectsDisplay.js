@@ -1,11 +1,11 @@
 // ------------------------------
 // Display Projects
 // ------------------------------
-function displayProjects(projectList) {
+function displayProjects(projectsList) {
   const container = document.getElementById("projectsContainer");
   container.innerHTML = "";
 
-  projectList.forEach(project => {
+  projectsList.forEach(project => {
     const card = document.createElement("div");
     card.classList.add("project-card");
 
@@ -20,7 +20,7 @@ function displayProjects(projectList) {
     container.appendChild(card);
   });
 
-  updateCounter(projectList.length);
+  updateCounter(projectsList.length);
 }
 
 // ------------------------------
@@ -58,6 +58,6 @@ function updateCounter(count) {
 }
 
 // ------------------------------
-// Initial Load
+// Initial Load (show only 4)
 // ------------------------------
-displayProjects(projects);
+displayProjects(projects.slice(0, 4));
